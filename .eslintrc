@@ -1,9 +1,24 @@
 {
-  "extends": ["react-app", "prettier", "prettier/react", "airbnb-base", "airbnb/rules/react"],
-  "plugins": ["jsx-a11y", "prettier", "import"],
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "react-app",
+    "prettier",
+    "prettier/react",
+    "airbnb-base",
+    "airbnb/rules/react"
+  ],
+  "plugins": [
+    "jsx-a11y",
+    "prettier",
+    "import",
+    "@typescript-eslint"
+  ],
   "settings": {
     "import/parsers": {
-      "@typescript-eslint/parser": [".ts", ".tsx"]
+      "@typescript-eslint/parser": [
+        ".ts",
+        ".tsx"
+      ]
     },
     "import/resolver": {
       "typescript": {
@@ -12,7 +27,14 @@
     }
   },
   "rules": {
+    "@typescript-eslint/no-unused-vars": [ 2, { "args": "none" } ],
+    "react/jsx-one-expression-per-line": "off",
+    "import/no-cycle": "off",
+    "react/no-array-index-key": "off",
+    "operator-linebreak": "off",
+    "implicit-arrow-linebreak": "off",
     "import/prefer-default-export": "off",
+    "import/no-named-default": "off",
     "react/prop-types": "off",
     "react/jsx-props-no-spreading": "off",
     "no-param-reassign": [2, { "props": false }],
@@ -20,7 +42,15 @@
     "linebreak-style": 0,
     "no-undef": "off",
     "semi": 0,
-    "react/jsx-filename-extension": [1, { "extensions": [".ts", ".tsx"] }],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".ts",
+          ".tsx"
+        ]
+      }
+    ],
     "prettier/prettier": [
       "error",
       {
@@ -28,7 +58,9 @@
       }
     ],
     "no-use-before-define": "off",
-    "@typescript-eslint/no-use-before-define": ["error"],
+    "@typescript-eslint/no-use-before-define": [
+      "error"
+    ],
     "import/no-unresolved": "error",
     "import/extensions": [
       "error",
